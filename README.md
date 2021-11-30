@@ -1,5 +1,7 @@
 # UnityToon
 
+![gif_animation_002](./images/gif_animation_002.gif)
+
 ## 1. outline
 
 **实现方式**：1.所有点的scale增大；2.所有点向法线方向迁移一定距离，迁移程度在inspector中设定。第二种方式效果更自然。
@@ -23,7 +25,7 @@ shadowCast
 URP主灯实时阴影：分屏幕空间阴影和其他阴影2条路径；是否采用屏幕空间阴影取决于是否开启了阴影级联以及设备性能。
 
 * 阴影级联：shadowMap按照摄像头视锥体进行采样，导致距离摄像头较近的部分采样数少，对这部分像素使用相同分辨率但尺寸缩小的shadowMap。相比使用高分辨率ShadowMap内存和带宽消耗都更小。
-* ![CSM](/images/CSM.png)
+* ![CSM](./images/CSM.png)
 
 屏幕空间阴影开销高：GLES设备不使用，通过屏幕空间坐标和depth获得CascadeShadowMap。
 
